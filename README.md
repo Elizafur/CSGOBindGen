@@ -1,3 +1,5 @@
+Out of date, to update later.
+
 CSGOBindGen
 ===========
 
