@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -404,12 +405,29 @@ namespace CSGO_Buy_Bind_Generator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.txtOutput.Text = "Output\n-----------\n";
+            txtOutput.Text = "Output\n-----------\n";
         }
 
         private void throwError(string message)
         {
             lblError.Text = message;
+        }
+
+        private void btnCFG_Click(object sender, EventArgs e)
+        {
+            TextWriter tw = new StreamWriter("binds.cfg");
+            List<string> newLines = new List<string>(txtOutput.Lines);
+
+            newLines.RemoveAt(0); //Removes
+            newLines.RemoveAt(0); //Output and --------- lines.
+            for (int i = 0; i < newLines.Count; i++)
+            {
+                tw.WriteLine(newLines[i]);
+            }
+            tw.WriteLine("//Generated with CS:GO Weapon Bind Generator by Eli");
+            tw.WriteLine(@"//To use ingame put the file in your csgo\cfg\ folder and type in console: 'exec binds.cfg'");
+            tw.Close();
+            throwError("Files written to 'binds.cfg'");
         }
         
     }

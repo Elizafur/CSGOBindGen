@@ -55,9 +55,9 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDeag = new System.Windows.Forms.Button();
+            this.btnP250 = new System.Windows.Forms.Button();
             this.btnKev = new System.Windows.Forms.Button();
             this.btnZeus = new System.Windows.Forms.Button();
-            this.btnP250 = new System.Windows.Forms.Button();
             this.btnMag = new System.Windows.Forms.Button();
             this.btnScout = new System.Windows.Forms.Button();
             this.btnFAMAS = new System.Windows.Forms.Button();
@@ -71,6 +71,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAUG = new System.Windows.Forms.Button();
             this.btnIncen = new System.Windows.Forms.Button();
+            this.btnCFG = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -295,9 +296,9 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(622, 281);
+            this.btnConfirm.Location = new System.Drawing.Point(622, 301);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(187, 41);
+            this.btnConfirm.Size = new System.Drawing.Size(93, 40);
             this.btnConfirm.TabIndex = 25;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -307,7 +308,7 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(589, 255);
+            this.lblError.Location = new System.Drawing.Point(619, 255);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 26;
@@ -392,6 +393,18 @@
             this.btnDeag.UseVisualStyleBackColor = false;
             this.btnDeag.Click += new System.EventHandler(this.btnDeag_Click);
             // 
+            // btnP250
+            // 
+            this.btnP250.BackColor = System.Drawing.Color.White;
+            this.btnP250.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnP250.Location = new System.Drawing.Point(3, 37);
+            this.btnP250.Name = "btnP250";
+            this.btnP250.Size = new System.Drawing.Size(93, 28);
+            this.btnP250.TabIndex = 31;
+            this.btnP250.Text = "P250";
+            this.btnP250.UseVisualStyleBackColor = false;
+            this.btnP250.Click += new System.EventHandler(this.btnP250_Click);
+            // 
             // btnKev
             // 
             this.btnKev.BackColor = System.Drawing.Color.White;
@@ -415,18 +428,6 @@
             this.btnZeus.Text = "Zeus";
             this.btnZeus.UseVisualStyleBackColor = false;
             this.btnZeus.Click += new System.EventHandler(this.btnZeus_Click);
-            // 
-            // btnP250
-            // 
-            this.btnP250.BackColor = System.Drawing.Color.White;
-            this.btnP250.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnP250.Location = new System.Drawing.Point(3, 37);
-            this.btnP250.Name = "btnP250";
-            this.btnP250.Size = new System.Drawing.Size(93, 28);
-            this.btnP250.TabIndex = 31;
-            this.btnP250.Text = "P250";
-            this.btnP250.UseVisualStyleBackColor = false;
-            this.btnP250.Click += new System.EventHandler(this.btnP250_Click);
             // 
             // btnMag
             // 
@@ -538,7 +539,7 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(715, 347);
+            this.btnCopy.Location = new System.Drawing.Point(715, 341);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(94, 40);
             this.btnCopy.TabIndex = 37;
@@ -548,7 +549,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(622, 347);
+            this.btnClear.Location = new System.Drawing.Point(715, 301);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(94, 40);
             this.btnClear.TabIndex = 38;
@@ -580,11 +581,22 @@
             this.btnIncen.UseVisualStyleBackColor = false;
             this.btnIncen.Click += new System.EventHandler(this.btnIncen_Click);
             // 
+            // btnCFG
+            // 
+            this.btnCFG.Location = new System.Drawing.Point(622, 341);
+            this.btnCFG.Name = "btnCFG";
+            this.btnCFG.Size = new System.Drawing.Size(94, 40);
+            this.btnCFG.TabIndex = 41;
+            this.btnCFG.Text = "Save to .cfg";
+            this.btnCFG.UseVisualStyleBackColor = true;
+            this.btnCFG.Click += new System.EventHandler(this.btnCFG_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 399);
+            this.Controls.Add(this.btnCFG);
             this.Controls.Add(this.btnIncen);
             this.Controls.Add(this.btnAUG);
             this.Controls.Add(this.btnMag);
@@ -678,6 +690,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAUG;
         private System.Windows.Forms.Button btnIncen;
+        private System.Windows.Forms.Button btnCFG;
     }
 }
 
